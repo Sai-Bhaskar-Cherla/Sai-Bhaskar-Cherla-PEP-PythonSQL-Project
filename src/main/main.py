@@ -86,7 +86,7 @@ def load_and_clean_call_logs(file_path):
             if len(transformed_data) != 5 or not all(transformed_data):
                 continue
             # Insert each data entry (after validation) into callLogs table
-            cursor.execute("INSERT INTO callLogs (phoneNumber, startTime, endTime, direction, userId) VALUES (?, ?, ?, ?, ?)", row)
+            cursor.execute("INSERT INTO callLogs (phoneNumber, startTime, endTime, direction, userId) VALUES (?, ?, ?, ?, ?)", transformed_data)
 
     conn.commit()
 
