@@ -56,7 +56,7 @@ def load_and_clean_users(file_path):
     
     with open(file_path, newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
-        # Lets skip the header row in csv file
+        # Skip the header row in csv file
         next(csv_reader,None)
 
         # Ignore the data which doesn't have either first name and last name or the values are falsy values
@@ -77,7 +77,7 @@ def load_and_clean_call_logs(file_path):
     
     with open(file_path, newline='') as csv_file:
         csv_reader = csv.reader(csv_file)
-        # Lets skip the header row in csv file
+        # Skip the header row in csv file
         next(csv_reader,None)
         
         # Ignore the data which doesn't have all values for five fields or any one of values rae falsy values.
