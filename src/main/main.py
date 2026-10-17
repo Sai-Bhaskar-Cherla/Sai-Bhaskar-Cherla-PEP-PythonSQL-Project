@@ -63,7 +63,7 @@ def load_and_clean_users(file_path):
         for line in csv_reader:
             transformed_data = [field.strip() for field in line]
 
-            if len(transformed_data) ! == 2 or not all (transformed_data):
+            if len(transformed_data) != 2 or not all (transformed_data):
                 continue
             # Insert each data entry (after validation) into users table
             cursor.execute("INSERT INTO users (firstName, lastName) VALUES (?,?)",transformed_data)
